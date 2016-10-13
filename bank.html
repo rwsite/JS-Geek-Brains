@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	<title>Банковская программа</title>	
+	<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- Optional theme -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- JQUERY -->
+    <head/> 
+
+<body>
+
+<header  class="navbar navbar-fixed-top" id="top" role="navigation">
+	<div class="container">
+		<div class="navbar-collapse">	
+		<!-- МЕНЮ-->
+			<nav class="navbar navbar-default" role="navigation">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="index.html">JAVA SCRIPT</a>
+				  <button type="button" class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" style="float:left;">
+					<span class="sr-only">Toggle navigation</span>
+					<span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</span>
+				  </button>
+				</div>
+				<div class="navbar-collapse collapse">
+				  <ul class="nav navbar-nav">
+						<li class="dropdown active">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Урок 1 <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="converter.html">Конвертор</a></li>
+							<li><a href="zagadki.html">Загадки</a></li>							
+							<li class="divider"></li>
+							<li class="dropdown-header">Необязательно</li>
+							<li><a href="#">Уравнение</a></li>
+							<li><a href="#">Логические задачки</a></li>
+							<li><a href="#">Создать HTML­страницу</a></li>
+						  </ul>
+						</li>
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Урок 2 <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="bank.html">Банковская программа</a></li>
+							<li><a href="resume.html">Встроить в сайт свою фотографию</a></li>							
+							<li class="divider"></li>
+							<li class="dropdown-header">Необязательно</li>
+							<li><a href="#">Дописать игру “Угадай число”</a></li>							
+						  </ul>
+						</li>
+				  </ul>				
+				  <ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Методичка<b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="https://d1ywbwqv5var5z.cloudfront.net/attachments/doc/000/126/307126307.pdf?1473835887" target="_blank">Методичка к первому уроку</a></li>	
+							<li><a href="https://d1ywbwqv5var5z.cloudfront.net/attachments/doc/000/119/858119858.pdf?1472194763" target="_blank">Методичка ко второму уроку</a></li>
+						  </ul>
+						</li>					
+					<li><a href="https://geekbrains.ru/streams/931" target="_blank"><strong>КУРС</strong></a></li>
+				  </ul>
+				</div>
+			  </div>
+			</nav>			
+		<!--КОНЕЦ МЕНЮ-->	
+		</div>		
+	</div>
+</header>
+
+
+<div class="container text-center">	
+			<div class="page-header" style="margin-top:100px">
+				<h1>Банковская программа</h1>
+				<p class="lead"></p>
+			</div>
+			<h3>Задание</h3>	
+			<section id="zadanie" class="container-fluid text-left">			
+				<p><strong>Банковская программа. </strong></p>
+				Пользователь вводит сумму вклада и процент, который будет начисляться ежегодно. Отобразить размер вклада поочередно на ближайшие 5 лет.
+			</section>	
+	
+	<section class="text-center container" style="padding-top:50px">	
+	<p class="text-center">Посчитать сколько мы получим денег, если внесем сумму X на Y лет, под процент Z.</p>	
+	<form><input class="btn btn-default" type="button" id="bank" value="Начать выполнение операции"/><form>
+			<script type="text/javascript">			
+			bank.onclick = function func() { 				
+				var i = 0;				
+				var X = +prompt('Введите сумму, которую хотите положить в банк');
+				var Y = +prompt('Введите количество лет');
+				var Z = +prompt('Процентная ставка (знак % указывать не нужно)')*0.01;
+				var summ = 0;
+				summ = X + (X*Y*Z);	
+				alert ('Если положили ' + X + ' рублей на ' + Y + ' лет. Под ' + Z + ' %');				
+				alert ('Через ' + Y + ' лет. Вы получите: ' + summ + 'рублей.');
+				alert ('Прибыль за весь период составит: ' + (summ-X) + ' рублей.');
+				}
+			</script>
+	</section>
+	<section class="text-center container" style="padding-top:50px">	
+	<p class="text-center">Посчитаем сколько мы будем получать каждый год.</p>	
+	<form><input class="btn btn-default" type="button" id="bank2" value="Начать выполнение операции"/><form>
+			<script type="text/javascript">			
+			bank2.onclick = function func() {
+				var X = +prompt('Введите сумму, которую хотите положить в банк');
+				var Y = +prompt('Введите количество лет');
+				var Z = +prompt('Процентная ставка (знак % указывать не нужно)')*0.01;	
+				/* За 5 лет мы получим: var summ = X + (X*Y*Z);*/
+				/* Составим формулу рассчета за 1 год: var summ = X + (X*count*Z);
+				где count у нас будет увеличиваться на 1, начиная с 0. До тех пор пока count < Y;
+				*/
+				for (var count = 0; count <= Y; count++) {
+						var summ = X + (X*count*Z);
+					 if (count==1)	{
+					 alert ('Через 1 год. Вы получите: ' + summ + 'рублей.');
+					break;					 
+						}
+					 if (count==2)	{
+					 alert ('Через 2 года. Вы получите: ' + summ + 'рублей.');
+						break;
+						}
+					if (count==3)	{
+					 alert ('Через 2 года. Вы получите: ' + summ + 'рублей.');
+						break;
+						}											
+					alert ('Через ' + Y + ' лет. Вы получите: ' + summ + 'рублей.');					
+				}
+		alert ('Операция завершена');		
+}
+
+			</script>
+	</section
+	
+
+<footer>
+
+
+</footer>	
+	
+</body>
+</html>

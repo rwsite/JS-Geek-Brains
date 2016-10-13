@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	<title>Игра в загадки</title>
+	<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- Optional theme -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- JQUERY -->
+
+    <head/> 
+
+<body>
+
+<header  class="navbar navbar-fixed-top" id="top" role="navigation">
+	<div class="container">
+		<div class="navbar-collapse">	
+		<!-- МЕНЮ-->
+			<nav class="navbar navbar-default" role="navigation">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="index.html">JAVA SCRIPT</a>
+				  <button type="button" class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" style="float:left;">
+					<span class="sr-only">Toggle navigation</span>
+					<span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</span>
+				  </button>
+				</div>
+				<div class="navbar-collapse collapse">
+				  <ul class="nav navbar-nav">
+						<li class="dropdown active">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Урок 1 <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="converter.html">Конвертор</a></li>
+							<li><a href="zagadki.html">Загадки</a></li>							
+							<li class="divider"></li>
+							<li class="dropdown-header">Необязательно</li>
+							<li><a href="#">Уравнение</a></li>
+							<li><a href="#">Логические задачки</a></li>
+							<li><a href="#">Создать HTML­страницу</a></li>
+						  </ul>
+						</li>
+				  </ul>				
+				  <ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Методичка<b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="https://d1ywbwqv5var5z.cloudfront.net/attachments/doc/000/126/307126307.pdf?1473835887" target="_blank">Методичка к первому уроку</a></li>							
+						  </ul>
+						</li>					
+					<li><a href="https://geekbrains.ru/streams/931" target="_blank"><strong>КУРС</strong></a></li>
+				  </ul>
+				</div>
+			  </div>
+			</nav>			
+		<!--КОНЕЦ МЕНЮ-->	
+		</div>		
+	</div>
+</header>
+		
+<div class="container text-center">	
+	<div class="page-header" style="margin-top:100px">
+		<h1>Игра в загадки</h1>
+		<p class="lead"></p>
+	</div>
+			<h3>Задание</h3>	
+			<section class="container-fluid text-left">			
+				<p><strong>Загадать загадку.</strong></p>
+				<ul>
+				<li><p>a. Если ответ верен – поздравить пользователя. Затем сообщить, что игра окончена.</p></li>
+				<li><p>b. Если ответ неверный – написать пользователю, что он не угадал.</p></li>
+				<li><p>c. Добавить еще 3</p></li>
+				</ul>
+			</section>
+			<div class="row">
+				<aside class="col-md-4" >
+				<p>Вариант А</p>
+				<input class="btn btn-default" type="button" id="z1" value="Начать загадывать"/>
+					<script type="text/javascript">
+							z1.onclick=function () {
+							  var a = prompt('В лесу родилась?');
+								if (a == 'елочка')
+								{
+									alert ('Поздравляем вы ответили правильно!');									
+								}
+																								
+								alert ('На этом вопросы закончились. Прощайте!');
+								
+								}
+					</script>
+				</aside>
+				<aside class="col-md-4"><p>Вариант В</p>
+				<input class="btn btn-default" type="button" id="z2" value="Начать загадывать"/>
+					<script type="text/javascript">
+							z2.onclick=function () {
+							  var a = prompt('Фильм "Крестный ..."?');
+								if (a == 'отец')
+								{
+									alert ('Поздравляем вы ответили правильно!');									
+								}	
+								else
+								{
+									alert ('Это неправильный ответ. Вы самое слабое звено.Прощайте!');									
+								}								
+								alert ('На этом вопросы закончились. Прощайте!');
+								}
+								
+					</script>
+				</aside>
+				<aside class="col-md-4">
+				<p>Вариант С</p>
+				<input class="btn btn-default" type="button" id="z3" value="Начать загадывать"/>
+					<script type="text/javascript">
+							z3.onclick=function () {
+							  var a = prompt('Фильм "Крестный ..."?');
+								if (a == 'отец'){						
+									alert ('Поздравляем вы ответили правильно!');
+									alert ('Загадка №2');
+									var b = prompt('Продолжите фразу. "Выпьем с горя, где же ..."?');
+										if (b == 'кружка')
+										{
+											alert ('Поздравляем вы ответили правильно!');
+											alert ('Загадка №3');
+											var с = prompt('Продолжите фразу. "Врагу не сдается наш гордый ..."?');
+												if (с == 'варяг')
+												{
+													alert ('Поздравляем вы ответили правильно!');
+													alert ('Это был последний вопрос, спасибо за участие!');													
+												}	
+												else 
+												{
+													alert ('Это неправильный ответ. Вы самое слабое звено. Прощайте!');									
+												}										
+										}	
+										else 
+										{
+											alert ('Это неправильный ответ. Вы самое слабое звено. Прощайте!');									
+										}							
+								}
+								else {							
+									alert ('Это неправильный ответ. Вы самое слабое звено. Прощайте!');	
+								}								
+								alert ('На этом вопросы закончились. Прощайте!');
+							}
+								
+					</script>
+				</aside>
+			</div>
+	
+<div>
+
+<footer>
+
+</footer>
+	
+</body>
+</html>

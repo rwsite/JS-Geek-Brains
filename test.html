@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+    do {
+        var deposit = +prompt("Введите сумму вклада");
+    } while (deposit <= 0);
+
+    do {
+        var percent = +prompt("Введите процент");
+    } while (percent < 0);
+
+    for (var year = 1; year <= 5 ; year++) {
+        deposit = deposit + deposit / 100 * percent; //100 + 100 / 100 * 5 == 105
+        document.write("Сумма за " + year + "-й " + deposit.toFixed(2) + "<br>");
+    }
+</script>

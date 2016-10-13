@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	<title>Конвертер валюты на Java Script. Доллары в рубли</title>
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- Optional theme -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- JQUERY -->
+    <head/> 
+
+<body>
+
+<header  class="navbar navbar-fixed-top" id="top" role="navigation">
+	<div class="container">
+		<div class="navbar-collapse">	
+		<!-- МЕНЮ-->
+			<nav class="navbar navbar-default" role="navigation">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="index.html">JAVA SCRIPT</a>
+				  <button type="button" class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" style="float:left;">
+					<span class="sr-only">Toggle navigation</span>
+					<span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</span>
+				  </button>
+				</div>
+				<div class="navbar-collapse collapse">
+				  <ul class="nav navbar-nav">
+						<li class="dropdown active">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Урок 1 <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="converter.html">Конвертор</a></li>
+							<li><a href="zagadki.html">Загадки</a></li>							
+							<li class="divider"></li>
+							<li class="dropdown-header">Необязательно</li>
+							<li><a href="#">Уравнение</a></li>
+							<li><a href="#">Логические задачки</a></li>
+							<li><a href="#">Создать HTML­страницу</a></li>
+						  </ul>
+						</li>
+				  </ul>				
+				  <ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Методичка<b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="https://d1ywbwqv5var5z.cloudfront.net/attachments/doc/000/126/307126307.pdf?1473835887" target="_blank">Методичка к первому уроку</a></li>							
+						  </ul>
+						</li>					
+					<li><a href="https://geekbrains.ru/streams/931" target="_blank"><strong>КУРС</strong></a></li>
+				  </ul>
+				</div>
+			  </div>
+			</nav>			
+		<!--КОНЕЦ МЕНЮ-->	
+		</div>		
+	</div>
+</header>
+
+
+<div class="container text-center">	
+	<div class="page-header" style="margin-top:100px">
+		<h1>Конвертер валюты</h1>
+		<p class="lead"></p>
+	</div>
+			<h3>Задание</h3>	
+			<section class="container-fluid text-left">			
+				<p><strong>Конвертер валют. </strong></p>
+				Программа хранит в переменных курс доллара и евро. Пользователь вводит сумму в рублях и получает информацию о том, сколько эта сумма составляет в долларах и евро.
+			</section>
+
+	<div class="text-center container">
+	
+	<p class="text-center">	Конвертер валюты на Java Script без условий</p>	
+	<input class="btn btn-default" type="button" id="conv" value="Меняем $"/>
+	<script type="text/javascript">
+			conv.onclick=function () {
+			  var a = parseInt (prompt('Сколько долларов будем менять?'));			
+			  var b = parseInt (prompt('Сколько стоит 1 доллар?'));
+			  alert (a * b + ' рублей');
+			}
+	</script>	
+	<input class="btn btn-default" id="elem" type="button" value="Меняем €" />
+	<script>
+	  elem.onclick = function () {
+				  var a = parseInt (prompt('Сколько евро будем менять?'));			
+				  var b = parseInt (prompt('Сколько стоит 1 евро?'));
+				  alert (a * b + ' рублей');
+				}				
+	</script>
+	</div>
+	
+	
+	<div class="text-center container" style="padding-top:50px">	
+	<p class="text-center">Продвинутый конвертер валюты на Java Script</p>	
+	<form><input class="btn btn-default" type="button" id="convpre" value="Меняем € и $"/><form>
+			<script type="text/javascript">
+			//название функции и что вернет в качестве аргумента.. [хотя.. мы же это не изучали XD]
+			convpre.onclick=function func() { 
+				var valuta = prompt('Что будем менять? Введите "usd", если доллары. Введите "eur", если евро?');			
+				  if (valuta ==  'usd') {					
+					alert( 'Будем менять Доллары' ); 					
+					var a = parseInt (prompt('Сколько долларов будем менять?'));			
+			 		var b = parseInt (prompt('Сколько стоит 1 доллар?'));
+					var c = a * b;
+			        alert (a * b + ' рублей');			        
+				  } 
+				 else if  (valuta ==  'eur'){  								 
+					alert( 'Будем менять Евро' );                   
+					var e = parseInt (prompt('Сколько евро будем менять?'));			
+			 		var f = parseInt (prompt('Сколько стоит 1 Евро?'));
+			        alert (e * f + ' рублей');					
+				  }	
+				else{
+				alert ('Ошибка. Нет такой валюты.');
+				}				  
+			}						
+			</script>
+	</div>
+
+<footer>
+
+
+</footer>	
+	
+</body>
+</html>
